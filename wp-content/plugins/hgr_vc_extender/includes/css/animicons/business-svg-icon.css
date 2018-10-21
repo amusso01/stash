@@ -1,0 +1,139 @@
+.bi-icon {}
+.bi-icon svg polyline,
+.bi-icon svg polygon,
+.bi-icon svg rect,
+.bi-icon svg circle,
+.bi-icon svg line,
+.bi-icon svg path {
+    stroke-linecap="square";
+    stroke-linejoin="miter";
+    stroke-width: 3;
+    stroke-miterlimit: 4;
+    stroke: #444;
+    fill: none;
+}
+
+.icon-type {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 60px;
+}
+
+.bi-icon {
+    height: 100px;
+    width: 100px;
+    padding: 107px;
+    box-shadow: 
+        2px 0 0 0 #f2f2f2, 
+        0 2px 0 0 #f2f2f2, 
+        2px 2px 0 0 #f2f2f2,   /* Just to fix the corner */
+        2px 0 0 0 #f2f2f2 inset, 
+        0 2px 0 0 #f2f2f2 inset;
+    float: left;
+    position: relative;
+}
+
+.bi-icon .snippet {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    height: 50px;
+    width: 80px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 10px;
+    color: #25a25a;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+    font-weight: bolder;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.bi-icon:hover .snippet {
+    visibility: visible;
+    opacity: 1;
+}
+
+.bi-icon .code-snippet .cross {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    font-size: 15px;
+    color: #AAA;
+    cursor: pointer
+}
+
+.bi-icon .code-snippet {
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+    left: 50%;
+    opacity: 0;
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    transform: translateX(-50%) translateY(0);
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    width: 900px;
+    z-index: 9999;
+}
+
+.bi-icon .code-snippet.active {
+    visibility: visible;
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.overlay {
+    background: #25a25a;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: all .6s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+}
+
+
+.overlay.active {
+    opacity: .9;
+    visibility: visible;
+}
+
+.large {
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+}
+
+.medium {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+}
+
+.small {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.animation-example {
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+}
